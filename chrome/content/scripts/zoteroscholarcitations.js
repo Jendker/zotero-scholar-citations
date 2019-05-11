@@ -139,7 +139,7 @@ Zotero.ScholarCitations.generateItemUrl = function(item) {
 };
 
 Zotero.ScholarCitations.updateItem = function(item) {
-    if (performance.now() - Zotero.ScholarCitations.lastFailureTime < 3000)
+    if (performance.now() - Zotero.ScholarCitations.lastFailureTime < 10000)
         return
     var req = new XMLHttpRequest();
     var url = Zotero.ScholarCitations.generateItemUrl(item);
